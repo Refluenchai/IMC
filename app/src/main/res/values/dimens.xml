@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--textos-->
+    <dimen name="h1">48sp</dimen>
+    <dimen name="h2">40sp</dimen>
+    <dimen name="h3">32sp</dimen>
+    <dimen name="h4">24sp</dimen>
+    <dimen name="h5">16sp</dimen>
+    <dimen name="h6">8sp</dimen>
+
+    <!--tamanhos-->
+    <dimen name="enorme">48sp</dimen>
+    <dimen name="muito_grande">40sp</dimen>
+    <dimen name="grande">32sp</dimen>
+    <dimen name="medio">24sp</dimen>
+    <dimen name="pequeno">16sp</dimen>
+    <dimen name="muito_pequeno">8sp</dimen>
+</resources>

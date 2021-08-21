@@ -1,0 +1,46 @@
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.slicedwork.imc.MainActivity"
+    tools:ignore="Autofill">
+
+    <EditText
+        android:id="@+id/edit_altura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/enorme"
+        android:layout_marginBottom="@dimen/medio"
+        android:gravity="center"
+        android:hint="@string/lbl_altura"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="@dimen/h3" />
+
+    <EditText
+        android:id="@+id/edit_peso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/enorme"
+        android:layout_marginBottom="@dimen/grande"
+        android:gravity="center"
+        android:hint="@string/lbl_peso"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="@dimen/h3" />
+
+    <Button
+        android:id="@+id/btn_calcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/enorme"
+        android:layout_marginBottom="@dimen/medio"
+        android:text="@string/lbl_calcular"
+        android:textSize="@dimen/h3" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

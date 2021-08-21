@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/calculoFragment">
+
+    <!--Calculo-->
+    <fragment
+        android:id="@+id/calculoFragment"
+        android:name="com.slicedwork.imc.ui.CalculoFragment"
+        android:label="Calculo"
+        tools:layout="@layout/fragment_calculo">
+        <action
+            android:id="@+id/action_calculoFragment_to_resultadoFragment"
+            app:destination="@id/resultadoFragment" />
+    </fragment>
+
+    <!--resultado-->
+    <fragment
+        android:id="@+id/resultadoFragment"
+        android:name="com.slicedwork.imc.ui.ResultadoFragment"
+        android:label="Resultado"
+        tools:layout="@layout/fragment_resultado">
+        <action
+            android:id="@+id/action_resultadoFragment_to_calculoFragment"
+            app:destination="@id/calculoFragment" />
+        <argument
+            android:name="imc"
+            app:argType="float" />
+        <argument
+            android:name="avaliacao"
+            app:argType="string" />
+        <argument
+            android:name="grau"
+            app:argType="string" />
+        <argument
+            android:name="imgAvaliacao"
+            app:argType="integer" />
+    </fragment>
+</navigation>

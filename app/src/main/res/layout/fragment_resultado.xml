@@ -1,0 +1,71 @@
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.slicedwork.imc.ui.ResultadoFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginHorizontal="@dimen/muito_grande"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_avaliacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/grande"
+            android:contentDescription="@string/lbl_img_avaliacao"
+            tools:srcCompat="@drawable/ic_magreza" />
+
+        <ImageView
+            android:id="@+id/img_legendas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/grande"
+            android:contentDescription="@string/lbl_img_avaliacao"
+            app:srcCompat="@drawable/ic_legendas" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/muito_grande"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_imc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/pequeno"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h1"
+            tools:text="IMC: 24.0" />
+
+        <TextView
+            android:id="@+id/txt_avaliacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/muito_pequeno"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h5"
+            tools:text="AVALIAÇÂO: MAGREZA" />
+
+        <TextView
+            android:id="@+id/txt_grau"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h5"
+            tools:text="GRAU: 0" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>
