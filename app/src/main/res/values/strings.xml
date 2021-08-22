@@ -2,11 +2,17 @@
     <string name="app_name">IMC</string>
     <!-- fragment_calculo -->
     <string name="lbl_calculadora">Calculadora IMC</string>
-    <string name="lbl_peso">Peso(Kg)</string>
-    <string name="lbl_altura">Altura(m)</string>
+    <string name="lbl_peso">Peso(Kg):</string>
+    <string name="lbl_altura">Altura(m):</string>
     <string name="lbl_calcular">Calcular ></string>
     <string name="lbl_erro_preenchimento">Campo não preenchido</string>
 
     <!-- fragment_resultado -->
     <string name="lbl_img_avaliacao">Imagem de avaliação</string>
+    <string name="lbl_altura_hint">0.00</string>
+    <string name="lbl_peso_hint">00.0</string>
+    <string name="lbl_altura_invalida">
+        Altura inválida:<br/>
+        Digitar valor em metros(0.00)
+    </string>
 </resources>

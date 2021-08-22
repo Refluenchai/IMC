@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.somatador.databinding.FragmentResultadoBinding
+import com.slicedwork.imc.databinding.FragmentResultadoBinding
 import kotlin.math.round
 
 class ResultadoFragment : Fragment() {

@@ -5,8 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
-import com.example.somatador.R
-import com.example.somatador.databinding.ActivityMainBinding
+import com.slicedwork.imc.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

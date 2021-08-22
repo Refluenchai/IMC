@@ -8,17 +8,35 @@
     tools:context="com.slicedwork.imc.MainActivity"
     tools:ignore="Autofill">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/enorme"
+        android:gravity="start"
+        android:text="@string/lbl_altura"
+        android:textColor="@color/white"
+        android:textSize="@dimen/h3" />
+
     <EditText
         android:id="@+id/edit_altura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/enorme"
-        android:layout_marginBottom="@dimen/medio"
-        android:gravity="center"
-        android:hint="@string/lbl_altura"
+        android:layout_marginBottom="@dimen/grande"
+        android:gravity="start"
+        android:hint="@string/lbl_altura_hint"
         android:inputType="numberDecimal"
         android:textColor="@color/white"
         android:textColorHint="@android:color/darker_gray"
+        android:textSize="@dimen/h4" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/enorme"
+        android:gravity="start"
+        android:text="@string/lbl_peso"
+        android:textColor="@color/white"
         android:textSize="@dimen/h3" />
 
     <EditText
@@ -27,12 +45,12 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/enorme"
         android:layout_marginBottom="@dimen/grande"
-        android:gravity="center"
-        android:hint="@string/lbl_peso"
+        android:gravity="start"
+        android:hint="@string/lbl_peso_hint"
         android:inputType="numberDecimal"
         android:textColor="@color/white"
         android:textColorHint="@android:color/darker_gray"
-        android:textSize="@dimen/h3" />
+        android:textSize="@dimen/h4" />
 
     <Button
         android:id="@+id/btn_calcular"

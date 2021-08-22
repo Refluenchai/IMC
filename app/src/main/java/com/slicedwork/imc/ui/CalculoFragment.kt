@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.example.somatador.R
-import com.example.somatador.databinding.FragmentCalculoBinding
+import com.slicedwork.imc.R
+import com.slicedwork.imc.databinding.FragmentCalculoBinding
 
 class CalculoFragment : Fragment() {
 
@@ -26,21 +26,15 @@ class CalculoFragment : Fragment() {
     override fun onResume() {
         super.onResume()
 
-        with(binding) {
+        focarComponente(binding.editAltura)
 
-            focarComponente(editAltura)
+        binding.btnCalcular.setOnClickListener {
+            if (camposPreenchidos() && alturaValida()) {
+                val imc = calcularImc()
 
-            btnCalcular.setOnClickListener {
-                if (camposPreenchidos(editAltura) && camposPreenchidos(editPeso)) {
-                    val altura = editAltura.text.toString().toFloat()
-                    val peso = editPeso.text.toString().toFloat()
+                val (avaliacao, grau, imgAvaliacao) = pegarImcAvaliacao(imc)
 
-                    val imc = peso / (altura * altura)
-
-                    val (avaliacao, grau, imgAvaliacao) = pegarImcAvaliacao(imc)
-
-                    irParaResultado(it, imc, avaliacao, grau, imgAvaliacao)
-                }
+                irParaResultado(it, imc, avaliacao, grau, imgAvaliacao)
             }
         }
     }
@@ -53,12 +47,33 @@ class CalculoFragment : Fragment() {
 
     private fun focarComponente(editAltura: EditText) = editAltura.requestFocus()
 
-    private fun camposPreenchidos(editText: EditText): Boolean {
+    private fun camposPreenchidos(): Boolean {
+        return campoPreenchido(binding.editAltura) && campoPreenchido(binding.editPeso)
+    }
+
+    private fun campoPreenchido(editText: EditText): Boolean {
         if (editText.text.isEmpty()) {
             editText.error = getString(R.string.lbl_erro_preenchimento)
             return false
         }
         return true
+    }
+
+    private fun alturaValida(): Boolean {
+        val altura = binding.editAltura.text.toString().toFloat()
+
+        if (altura >= 10) {
+            binding.editAltura.error = getString(R.string.lbl_altura_invalida)
+            return false
+        }
+        return true
+    }
+
+    private fun calcularImc(): Float {
+        val altura = binding.editAltura.text.toString().toFloat()
+        val peso = binding.editPeso.text.toString().toFloat()
+
+        return peso / (altura * altura)
     }
 
     private fun pegarImcAvaliacao(imc: Float): Triple<String, String, Int> {
@@ -90,9 +105,7 @@ class CalculoFragment : Fragment() {
     }
 
     private fun limparComponentes() {
-        with(binding) {
-            editAltura.text.clear()
-            editPeso.text.clear()
-        }
+        binding.editAltura.text.clear()
+        binding.editPeso.text.clear()
     }
 }
