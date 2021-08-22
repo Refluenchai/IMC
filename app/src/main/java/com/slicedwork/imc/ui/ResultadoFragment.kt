@@ -30,7 +30,7 @@ class ResultadoFragment : Fragment() {
     }
 
     private fun definirComponentes() {
-        val imc = "IMC: ${round(args.imc.toDouble()).toFloat()}"
+        val imc = "IMC: ${args.imc.toDouble().toFloat()}"
         val avaliacao = "AVALIAÇÂO: ${args.avaliacao}"
         val grau = "GRAU: ${args.grau}"
 

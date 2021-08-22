@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.slicedwork.imc.R
 import com.slicedwork.imc.databinding.FragmentCalculoBinding
+import kotlin.math.round
 
 class CalculoFragment : Fragment() {
 
@@ -30,7 +31,7 @@ class CalculoFragment : Fragment() {
 
         binding.btnCalcular.setOnClickListener {
             if (camposPreenchidos() && alturaValida()) {
-                val imc = calcularImc()
+                val imc = round(calcularImc())
 
                 val (avaliacao, grau, imgAvaliacao) = pegarImcAvaliacao(imc)
 
@@ -79,7 +80,7 @@ class CalculoFragment : Fragment() {
     private fun pegarImcAvaliacao(imc: Float): Triple<String, String, Int> {
         return when (imc.toInt()) {
             in 0..18 -> Triple("MAGREZA", "0", R.drawable.ic_magreza)
-            in 18..24 -> Triple("NORMAL", "0", R.drawable.ic_normal)
+            in 19..24 -> Triple("NORMAL", "0", R.drawable.ic_normal)
             in 25..29 -> Triple("SOBREPESO", "0", R.drawable.ic_sobrepeso)
             in 30..35 -> Triple("OBESIDADE", "I", R.drawable.ic_obesidade)
             in 36..40 -> Triple("OBESIDADE SEVERA", "II", R.drawable.ic_obesidade_severa)
