@@ -12,8 +12,8 @@ e o outro para a exibição dos resultados obtidos.
 
 <h3>Exemplo:</h2>
 <div style="display: inline_block">
-  <img src="https://github.com/Refluenchai/IMC/blob/main/images/Calculo.png" width="270" height="423">  
-  <img src="https://github.com/Refluenchai/IMC/blob/main/images/Resultado.png" width="270" height="423">
+  <img src="https://github.com/Refluenchai/IMC/blob/main/images/prints/calculo.png" width="250" height="423">  
+  <img src="https://github.com/Refluenchai/IMC/blob/main/images/prints/resultado.png" width="250" height="423">
 </div>
 
 #
