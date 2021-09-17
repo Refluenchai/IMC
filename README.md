@@ -15,10 +15,3 @@ e o outro para a exibição dos resultados obtidos.
   <img src="https://github.com/Refluenchai/IMC/blob/main/images/prints/calculo.png" width="250" height="423">  
   <img src="https://github.com/Refluenchai/IMC/blob/main/images/prints/resultado.png" width="250" height="423">
 </div>
-
-#
-
-<h3>Como rodar no android:</h2>
-
-1 - Envie o arquivo "app-release.apk" da pasta "app/release/" para o seu dispositivo android.<br>
-2 - Abra o arquivo e instale.
